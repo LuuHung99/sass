@@ -1,0 +1,117 @@
+.footer {
+    &-top {
+        background-color: $gray-dark;
+        padding: 150px 0;
+    }
+    &-main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 100px;
+    }
+    &-desc {
+        margin: 50px 0;
+    }
+    .social {
+        display: flex;
+        align-items: center;
+        gap: 0 30px;
+      }
+    .social-item {
+        cursor: pointer;
+        color: $gray-light;
+        &:hover {
+            color: $color-white;
+        }
+    }
+    
+    &-links {
+        list-style-type: none;
+        padding: 20px 0;
+    }
+    &-item {
+        padding: 15px 0;
+        &:hover {
+            color: $color-white;
+        }
+    }
+    &-info {
+        padding: 15px 0;
+        li {
+            padding: 10px 0;
+            list-style-type: none;
+            line-height: 2;
+        }
+    }
+    &-highlight {
+        color: $color-white;
+        cursor: pointer;
+    }
+    &-heading {
+        color: $gray-lighter;
+    }
+    &-bottom {
+        background-color: $gray-darker;
+    }
+    &-container {
+        padding: 60px 0;
+        position: relative;
+         a{
+            color: $gray-lighter;
+        }
+        p {
+            line-height: 2;
+        }
+    }
+    &-rocket {
+        color: $color-white;
+        border-radius: 4px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue-color;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    @include maxw(1023px) {
+        &-main {
+            grid-gap: 0 40px;
+        }
+        &-container {
+            margin-left: 20px;
+        }
+      }
+
+      @include maxw(767px) {
+        &-top {
+            background-color: $gray-dark;
+            padding: 50px 0;
+        }
+        &-main {
+            grid-template-columns: 1fr;
+        }
+        &-desc {
+            margin: 20px 0;
+        }
+        .social {
+            margin-bottom: 40px;
+        }
+        &-rocket {
+            width: 50px;
+            height: 50px;
+            font-size: 16px;
+            right: 20px;
+        }
+        &-container {
+            padding: 30px 0;
+        }
+      }
+
+}
+ 

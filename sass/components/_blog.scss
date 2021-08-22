@@ -1,0 +1,46 @@
+.blog {
+    margin: 100px 0;
+    &-header {
+        text-align: center;
+    }
+    &-desc {
+        width: 600px;
+        margin: 0 auto;
+    }
+    &-list {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 50px;
+    }
+
+    @include maxw(1023px) {
+
+        &-list {
+            grid-gap: 0 20px;
+        }
+        &-title {
+            font-size: 20px;
+        }
+        
+      }
+
+      @include maxw(1023px) {
+        &-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &-title {
+            max-width: 100%;
+        }
+        &-image img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &-desc {
+            width: 100%;
+        }
+       
+        
+      }
+}

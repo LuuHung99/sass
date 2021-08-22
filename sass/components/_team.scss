@@ -1,0 +1,43 @@
+.team {
+    padding: 150px 0;
+    background-color: $gray-lighter;
+    &-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-content {
+        width: 380px;
+        margin-right: auto;
+    }
+    &-desc {
+        color: $gray-light;
+        font-size: 18px;
+        line-height: 34px;
+        margin-bottom: 60px;
+    }
+    &-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    &-img2 {
+        margin-left: auto;
+        margin-top: 30px;
+    }
+
+    @include maxw(1023px) {
+        padding: 50px 0;
+        &-main {
+            flex-direction: column;
+        }
+        &-content {
+            width: 100%;
+        }
+        &-images {
+            margin-top: 50px;
+        }
+      }
+
+}
